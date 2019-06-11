@@ -2,10 +2,10 @@
   <div id="app">
     <Header id="header"></Header>
     <main id="main">
-      <router-view/>   
+      <router-view/>
     </main>
     <Footer id="footer"></Footer>
-     
+
   </div>
 </template>
 
@@ -58,7 +58,7 @@ export default {
   #app {
     grid-template-columns: 10px auto 10px;
 
-    #header, #footer {
+    #header, #footer,main {
       padding-left: 10px;
       padding-right: 10px;
     }
