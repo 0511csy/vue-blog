@@ -29,7 +29,7 @@ export default {
     onPageChange(newPage) {
       blog.getBlogsByUserId(this.userId, { page: newPage }).then(res => {
         console.log(res)
-        this.blogs = res.data
+        this.blogs = res.data.filter(blog=>blog.user)
         this.total = res.total
         this.page = res.page
         this.$router.push({ path: `/user/${this.userId}`, query: { page: newPage}})

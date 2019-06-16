@@ -13,8 +13,9 @@ export default {
   created() {
     this.page = parseInt(this.$route.query.page) || 1
     blog.getIndexBlogs({ page: this.page }).then(res => {
+      console.log('index:')
       console.log(res)
-      this.blogs = res.data
+      this.blogs = res.data.filter(blog=>blog.user)
       this.total = res.total
       this.page = res.page
     })
